@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
           document.body.removeChild(hiddenFrame);
-          window.location.href = fallbackUrl;
+          window.open(fallbackUrl, '_blank', 'noopener,noreferrer');
         }, 1200);
       } else {
         setTimeout(() => {
