@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="description" content="SOS SL showcase of herbal products and contact options for a local boutique experience.">
+    <title>SOS SL | Herbal Studio</title>
+    <link rel="icon" type="image/png" href="logo/Sos_sl_logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="age-gate-overlay" id="ageGateOverlay" aria-hidden="false">
+        <div class="age-gate-card">
+            <p class="brand-pill">18+ Only</p>
+            <h1>SOS SL</h1>
+            <p class="age-copy">This experience is intended for adults only. Please confirm your age to continue.</p>
+            <div id="ageForm" class="age-form">
+                <button type="button" class="age-confirm-btn" data-age-choice="over18">Yes, I am 18+</button>
+                <button type="button" class="age-confirm-btn age-deny-btn" data-age-choice="under18">No, I am under 18</button>
+            </div>
+            <p id="ageMessage" class="age-message" aria-live="polite"></p>
+        </div>
+    </div>
+
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <div id="mainContent" class="main-content hidden">
+        <header class="hero">
+            <p class="brand-pill">Naturel • Inspirant • Relaxant</p>
+            <h1>SOS SL</h1>
+            <p class="hero-copy">Dispo H24 7/7</p>
+            <a href="#collection" class="cta">Explore la collection</a>
+        </header>
+
+    <main id="collection" class="product-grid product-row" aria-label="Collection de produits">
+        <article class="product-card">
+            <div class="product-icon-box" aria-hidden="true">🌿</div>
+            <h3>Eco Calm</h3>
+            <p>Une variété pour un équilibre naturel et un moment de détente unique.</p>
+            <div class="product-footer">
+                <span class="product-price">$10</span>
+                <button class="buy-button" data-product="Eco Calm" data-price="10">Commander</button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-icon-box" aria-hidden="true">🌙</div>
+            <h3>Moon Mint</h3>
+            <p>Un effet de fraicheur et une touche de relaxation a votre soiree.</p>
+            <div class="product-footer">
+                <span class="product-price">$10</span>
+                <button class="buy-button" data-product="Moon Mint" data-price="10">Commander</button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-icon-box" aria-hidden="true">⚡</div>
+            <h3>Volt Herb</h3>
+            <p>Pas d'appetit ? Découvrez notre solution naturelle.</p>
+            <div class="product-footer">
+                <span class="product-price">$10</span>
+                <button class="buy-button" data-product="Volt Herb" data-price="10">Commander</button>
+            </div>
+        </article>
+    </main>
+
+    <div class="contact-dialog-overlay" id="contactDialog" aria-hidden="true">
+        <div class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contactDialogTitle">
+            <h2 id="contactDialogTitle">Contactez-nous</h2>
+            <p>Choisissez Snapchat ou Instagram pour finaliser votre commande.</p>
+            <div class="contact-actions">
+                <a class="contact-option" href="https://www.snapchat.com/add/sos_sl" data-method="snapchat" target="_blank" rel="noopener noreferrer">Snapchat</a>
+                <a class="contact-option" href="https://instagram.com/sos_sl_" data-method="instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+            <button class="dialog-close" id="contactDialogClose" type="button">Annuler</button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/script.js"></script>
+    </div>
+</body>
+</html>
