@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (method === 'snapchat') {
       return preferApp && isMobileDevice()
-        ? 'snapchat://add/sos_sl'
+        ? 'snapchat://add/sos_sl243'
         : contactConfig.snapchatUrl;
     }
 
