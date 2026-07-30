@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const ageMessage = document.getElementById('ageMessage');
 
   const contactConfig = {
-    snapchatUrl: 'https://www.snapchat.com/add/sos_sl243',
-    instagramUrl: 'https://instagram.com/sos_sl_',
+    snapchatUrl: 'https://www.snapchat.com/add/sos_sl',
+    instagramUrl: 'https://www.instagram.com/sos_sl_',
   };
 
   let selectedProduct = null;
@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function isMobileDevice() {
-    return /Android|iPhone|iPad|iPod|Mobile|mobile/i.test(navigator.userAgent || '');
+    const userAgent = navigator.userAgent || '';
+    const hasTouch = navigator.maxTouchPoints > 0 || 'ontouchstart' in window;
+    return /Android|iPhone|iPad|iPod|Mobile|mobile/i.test(userAgent) || (hasTouch && window.innerWidth <= 768);
   }
 
   function getContactUrl(method, preferApp = false) {
@@ -51,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (method === 'snapchat') {
       return preferApp && isMobileDevice()
-        ? 'snapchat://add/sos_sl243'
+        ? 'snapchat://add/sos_sl'
         : contactConfig.snapchatUrl;
     }
 
@@ -138,15 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isMobileDevice()) {
         const appUrl = getContactUrl(method, true);
         const fallbackUrl = getContactUrl(method);
-        const hiddenFrame = document.createElement('iframe');
-        hiddenFrame.style.display = 'none';
-        hiddenFrame.src = appUrl;
-        document.body.appendChild(hiddenFrame);
+
+        window.location.href = appUrl;
 
         setTimeout(() => {
-          document.body.removeChild(hiddenFrame);
-          window.open(fallbackUrl, '_blank', 'noopener,noreferrer');
-        }, 1200);
+          window.location.href = fallbackUrl;
+        }, 1500);
       } else {
         setTimeout(() => {
           window.open(getContactUrl(method), '_blank', 'noopener,noreferrer');
