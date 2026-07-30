@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const ageMessage = document.getElementById('ageMessage');
 
   const contactConfig = {
-    snapchatUrl: 'https://www.snapchat.com/add/sos_sl',
+    snapchatUrl: 'https://www.snapchat.com/add/sos_sl243',
     instagramUrl: 'https://www.instagram.com/sos_sl_',
   };
 
